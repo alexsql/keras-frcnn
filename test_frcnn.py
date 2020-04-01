@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 import sys
 import pickle
+import matplotlib.pyplot as plt
 from optparse import OptionParser
 import time
 from keras_frcnn import config
@@ -11,6 +12,7 @@ from keras import backend as K
 from keras.layers import Input
 from keras.models import Model
 from keras_frcnn import roi_helpers
+
 
 sys.setrecursionlimit(40000)
 
@@ -242,6 +244,8 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 
 	print('Elapsed time = {}'.format(time.time() - st))
 	print(all_dets)
-	cv2.imshow('img', img)
-	cv2.waitKey(0)
-	# cv2.imwrite('./results_imgs/{}.png'.format(idx),img)
+	#cv2.imshow('img', img)
+	#cv2.waitKey(0)
+	# cv2.imwrite('./results_imgs/{}.png'.format(idx),img
+	plt.imshow(image)
+	plt.show()
